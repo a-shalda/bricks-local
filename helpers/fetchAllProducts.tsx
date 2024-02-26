@@ -5,7 +5,7 @@ import { productIsValid } from "@/helpers/productIsValid";
 export default async function getAllProducts(lang: string) {
 
   let updatedProducts: ProductsProps = []
-  const { data } = await supabase.from('products').select()
+  const { data } = await supabase.from('products_ru').select()
 
   if (data !== null) {
     for (let i = 0; i < data.length; i++) {
