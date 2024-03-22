@@ -7,6 +7,7 @@ import Text from "@/components/main/text";
 import type { Metadata, ResolvingMetadata } from 'next'
 import { type MetadataProductProps } from '@/lib/types'
 
+
 export async function generateMetadata(
   { params }: MetadataProductProps,
   parent: ResolvingMetadata
@@ -19,7 +20,10 @@ export async function generateMetadata(
 
   return {
     title: categoryTitle,
-    description: categoryDescription
+    description: categoryDescription,
+    alternates: {
+      canonical: '/',
+    },
   }
 }
 
